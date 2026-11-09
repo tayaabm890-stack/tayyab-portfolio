@@ -1,0 +1,196 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | Tayyab Muneer</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            font-family: Inter, sans-serif;
+            color: white;
+            background:
+                radial-gradient(ellipse at 15% 15%, #7138c955, transparent 40%),
+                radial-gradient(ellipse at 85% 85%, #5425a944, transparent 40%),
+                #090713;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 430px;
+            padding: 40px;
+            background: rgba(24, 18, 42, .85);
+            border: 1px solid #a78bfa35;
+            border-radius: 24px;
+            box-shadow: 0 25px 80px #0008;
+            backdrop-filter: blur(20px);
+        }
+
+        .logo {
+            width: 58px;
+            height: 58px;
+            display: grid;
+            place-items: center;
+            margin: 0 auto 23px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #a78bfa, #6d28d9);
+            font-size: 27px;
+            font-weight: 800;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 27px;
+            margin: 0 0 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #aaa3bd;
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            margin: 18px 0 9px;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #a78bfa35;
+            border-radius: 11px;
+            background: #ffffff08;
+            color: white;
+            outline: none;
+            font: inherit;
+            font-size: 13px;
+        }
+
+        input:focus { border-color: #a78bfa; }
+        input::placeholder { color: #777087; }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 15px;
+            border: none;
+            border-radius: 11px;
+            background: linear-gradient(100deg, #8b5cf6, #6d28d9);
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .25s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px #8b5cf655;
+        }
+
+        .message {
+            padding: 12px;
+            margin-bottom: 12px;
+            border-radius: 9px;
+            font-size: 12px;
+            background: #ef444420;
+            color: #fca5a5;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+            color: #b9a2f7;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        .secure {
+            text-align: center;
+            margin-top: 23px;
+            color: #777087;
+            font-size: 10px;
+        }
+
+        @media(max-width: 480px) {
+            .login-card { padding: 28px 22px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-card">
+
+    <div class="logo">T</div>
+
+    <h1>Admin Login</h1>
+    <p class="subtitle">
+        Welcome back! Sign in to manage your portfolio.
+    </p>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="message">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+
+   <form method="POST">
+    {% csrf_token %}
+
+    <label>Admin Email</label>
+    <input
+        type="email"
+        name="email"
+        value="admin@gmail.com"
+        placeholder="Enter admin email"
+        required
+    >
+
+    <label>Admin Password</label>
+    <input
+        type="password"
+        name="password"
+        placeholder="Enter admin password"
+        required
+    >
+
+    <button type="submit">Login to Dashboard</button>
+</form>
+
+        <label for="password">Password</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            autocomplete="current-password"
+            required
+        >
+
+        <button type="submit">Sign In to Dashboard →</button>
+    </form>
+
+    <a class="back" href="/">← Back to Portfolio</a>
+
+    <div class="secure">🔒 SECURE ADMIN ACCESS · TAYYAB MUNEER</div>
+
+</div>
+
+</body>
+</html>

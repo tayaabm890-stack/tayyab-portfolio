@@ -1,0 +1,129 @@
+
+/* ===== TAYYAB MUNEER ADMIN THEME ===== */
+
+:root {
+    --purple: #8b5cf6;
+    --purple-dark: #6d28d9;
+    --dark-bg: #11111b;
+    --card-bg: #1c1b29;
+}
+
+/* Main background */
+body,
+.content-wrapper {
+    background: var(--dark-bg) !important;
+    color: #f1f1f5 !important;
+}
+
+/* Sidebar */
+.main-sidebar {
+    background: #171625 !important;
+    border-right: 1px solid #302747;
+}
+
+.brand-link {
+    background: #171625 !important;
+    border-bottom: 1px solid #302747 !important;
+}
+
+.brand-text {
+    color: #c4a5ff !important;
+    font-weight: 700 !important;
+}
+
+/* Sidebar menu */
+.nav-sidebar .nav-link {
+    color: #c5c2d3 !important;
+    border-radius: 8px;
+    margin: 3px 8px;
+    transition: 0.2s ease;
+}
+
+.nav-sidebar .nav-link:hover,
+.nav-sidebar .nav-link.active {
+    background: linear-gradient(
+        90deg,
+        #6d28d9,
+        #8b5cf6
+    ) !important;
+    color: white !important;
+}
+
+/* Navbar */
+.main-header {
+    background: #191827 !important;
+    border-bottom: 1px solid #302747 !important;
+}
+
+/* Content cards */
+.card,
+.small-box,
+.info-box {
+    background: var(--card-bg) !important;
+    color: #f1f1f5 !important;
+    border: 1px solid #302747 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    border-bottom: 1px solid #302747 !important;
+}
+
+/* Tables */
+.table {
+    color: #e8e5f0 !important;
+}
+
+.table thead th {
+    background: #282438 !important;
+    color: #c4a5ff !important;
+    border-color: #403454 !important;
+}
+
+.table td {
+    border-color: #302747 !important;
+}
+
+/* Form fields */
+.form-control,
+select,
+textarea {
+    background: #242234 !important;
+    color: white !important;
+    border: 1px solid #44375d !important;
+    border-radius: 7px !important;
+}
+
+.form-control:focus {
+    border-color: var(--purple) !important;
+    box-shadow: 0 0 0 3px rgba(139,92,246,0.15) !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--purple-dark) !important;
+    border-color: var(--purple) !important;
+    border-radius: 7px !important;
+}
+
+.btn-primary:hover {
+    background: var(--purple) !important;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    color: #e9ddff !important;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background: transparent !important;
+}
+
+/* Footer */
+.main-footer {
+    background: #171625 !important;
+    border-top: 1px solid #302747 !important;
+    color: #aaa5b9 !important;
+}
